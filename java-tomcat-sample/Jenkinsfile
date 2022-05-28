@@ -19,13 +19,13 @@ pipeline {
             }
             
         }
-        stage('Deploy to Production'){
-            steps{
-                timeout(time:10, unit:'MINUTES'){
-                    input message:'Approve PRODUCTION Deployment?'
-                }
-                build job: 'Deploy_Application_Prod_Environment'
-            }
-        }
+        // stage('Deploy to Production'){
+        //     steps{
+        //         timeout(time:10, unit:'MINUTES'){
+        //             input message:'Approve PRODUCTION Deployment?'
+        //         }
+        //         build job: 'Deploy_Application_Prod_Environment'
+        //     }
+        // }
     }
 }
